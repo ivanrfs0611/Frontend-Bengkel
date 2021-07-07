@@ -32,6 +32,12 @@ class App extends Component {
             />
             <Route
               exact
+              path="/Homepage"
+              name="Homepage"
+              render={(props) => <Homepage {...props} />}
+            />
+            <Route
+              exact
               path="/register"
               name="Register Page"
               render={(props) => <Register {...props} />}

@@ -1,1 +1,53 @@
 // Here you can add other styles
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+div {
+    background-color: white;
+}
+
+.table {
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    background-color: white;
+}
+
+.datatable {
+    text-align: center;
+}
+
+.card-body {
+    box-shadow: 5px 5px 8px  #cecece;
+}
+
+.text{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 25;
+    margin-left: 9rem;
+}
+
+.button {
+    color: #ffffff;
+    align-items: center;
+    display: inline-flex; 
+    float: right;
+    font-family: 'Roboto', sans-serif;
+    padding: 8px 12px;
+    margin-right: 9rem;
+    background-color: #EC8654;
+}
+
+.col {
+    padding-bottom: 2rem;
+}
+
+.card {
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+html {
+    background-color: white;
+}

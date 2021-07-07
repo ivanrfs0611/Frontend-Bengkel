@@ -1,59 +1,51 @@
+import React from "react"
 import {
-  CNavbar,
-  CToggler,
-  CNavbarBrand,
-  CCollapse,
-  CNavbarNav,
-  CNavLink,
-  CForm,
-  CInput,
+  CDataTable,
   CButton,
-  CDropdown,
-  CDropdownToggle,
-  CDropdownMenu,
-  CDropdownItem,
-} from "@coreui/react";
-import React, { Component } from "react";
+  CCard,
+  CCardBody,
+  CCol,
+  CRow
+} from '@coreui/react'
+import { DocsLink } from 'src/reusable'
+import usersData from '../../users/UsersData'
+import CIcon from '@coreui/icons-react'
 
-export default class Homepage extends Component {
-  render() {
-    return (
-      <div>
-        <CNavbar expandable="sm" color="#000000">
-          <CToggler inNavbar />
-          <CNavbarBrand>NavbarBrand</CNavbarBrand>
-          <CCollapse navbar>
-            <CNavbarNav>
-              <CNavLink>Home</CNavLink>
-              <CNavLink>Link</CNavLink>
-            </CNavbarNav>
-            <CNavbarNav className="ml-auto">
-              <CForm inline>
-                <CInput className="mr-sm-2" placeholder="Search" size="sm" />
-                <CButton color="light" className="my-2 my-sm-0" type="submit">
-                  Search
-                </CButton>
-              </CForm>
-              <CDropdown inNav>
-                <CDropdownToggle color="primary">Lang</CDropdownToggle>
-                <CDropdownMenu>
-                  <CDropdownItem>EN</CDropdownItem>
-                  <CDropdownItem>ES</CDropdownItem>
-                  <CDropdownItem>RU</CDropdownItem>
-                  <CDropdownItem>FA</CDropdownItem>
-                </CDropdownMenu>
-              </CDropdown>
-              <CDropdown inNav>
-                <CDropdownToggle color="primary">User</CDropdownToggle>
-                <CDropdownMenu>
-                  <CDropdownItem>Account</CDropdownItem>
-                  <CDropdownItem>Settings</CDropdownItem>
-                </CDropdownMenu>
-              </CDropdown>
-            </CNavbarNav>
-          </CCollapse>
-        </CNavbar>
-      </div>
-    );
-  }
+
+const fields = ['ID','NAMA_LENGKAP', 'NO_TELFON', 'EMAIL', 'ALAMAT', 'TANGGAL_MASUK']
+
+const Homepage = () => {
+
+  return (
+<><br></br><br></br><br></br><br></br><br></br><br></br>
+  <div class='table'>
+    <div>
+      <CCol className='header'>
+        <CButton className='button'>
+          <CIcon name="cil-user-follow" className='icon' />
+            <strong><span className="mfs-2">ADD EMPLOYEE</span></strong>
+          </CButton>
+        <h2 class='text'>Employees</h2>
+      </CCol>
+    </div>
+      <CRow>
+        <CCol>
+          <CCard className='card'>
+            <CCardBody className='datatable'>
+              <CDataTable 
+              items={usersData}
+              fields={fields}
+              itemsPerPage={10}
+              pagination
+              striped
+              />
+            </CCardBody>
+          </CCard>
+        </CCol>
+      </CRow>
+    </div>
+  </>
+  )
 }
+
+export default Homepage
