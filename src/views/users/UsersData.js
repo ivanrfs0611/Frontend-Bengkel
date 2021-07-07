@@ -1,29 +1,23 @@
 const usersData = [
-  {id: 0, name: 'John Doe', registered: '2018/01/01', role: 'Guest', status: 'Pending'},
-  {id: 1, name: 'Samppa Nori', registered: '2018/01/01', role: 'Member', status: 'Active'},
-  {id: 2, name: 'Estavan Lykos', registered: '2018/02/01', role: 'Staff', status: 'Banned'},
-  {id: 3, name: 'Chetan Mohamed', registered: '2018/02/01', role: 'Admin', status: 'Inactive'},
-  {id: 4, name: 'Derick Maximinus', registered: '2018/03/01', role: 'Member', status: 'Pending'},
-  {id: 5, name: 'Friderik Dávid', registered: '2018/01/21', role: 'Staff', status: 'Active'},
-  {id: 6, name: 'Yiorgos Avraamu', registered: '2018/01/01', role: 'Member', status: 'Active'},
-  {id: 7, name: 'Avram Tarasios', registered: '2018/02/01', role: 'Staff', status: 'Banned'},
-  {id: 8, name: 'Quintin Ed', registered: '2018/02/01', role: 'Admin', status: 'Inactive'},
-  {id: 9, name: 'Enéas Kwadwo', registered: '2018/03/01', role: 'Member', status: 'Pending'},
-  {id: 10, name: 'Agapetus Tadeáš', registered: '2018/01/21', role: 'Staff', status: 'Active'},
-  {id: 11, name: 'Carwyn Fachtna', registered: '2018/01/01', role: 'Member', status: 'Active'},
-  {id: 12, name: 'Nehemiah Tatius', registered: '2018/02/01', role: 'Staff', status: 'Banned'},
-  {id: 13, name: 'Ebbe Gemariah', registered: '2018/02/01', role: 'Admin', status: 'Inactive'},
-  {id: 14, name: 'Eustorgios Amulius', registered: '2018/03/01', role: 'Member', status: 'Pending'},
-  {id: 15, name: 'Leopold Gáspár', registered: '2018/01/21', role: 'Staff', status: 'Active'},
-  {id: 16, name: 'Pompeius René', registered: '2018/01/01', role: 'Member', status: 'Active'},
-  {id: 17, name: 'Paĉjo Jadon', registered: '2018/02/01', role: 'Staff', status: 'Banned'},
-  {id: 18, name: 'Micheal Mercurius', registered: '2018/02/01', role: 'Admin', status: 'Inactive'},
-  {id: 19, name: 'Ganesha Dubhghall', registered: '2018/03/01', role: 'Member', status: 'Pending'},
-  {id: 20, name: 'Hiroto Šimun', registered: '2018/01/21', role: 'Staff', status: 'Active'},
-  {id: 21, name: 'Vishnu Serghei', registered: '2018/01/01', role: 'Member', status: 'Active'},
-  {id: 22, name: 'Zbyněk Phoibos', registered: '2018/02/01', role: 'Staff', status: 'Banned'},
-  {id: 23, name: 'Aulus Agmundr', registered: '2018/01/01', role: 'Member', status: 'Pending'},
-  {id: 42, name: 'Ford Prefect', registered: '2001/05/25', role: 'Alien', status: 'Don\'t panic!'}
+  {ID: 1, NAMA_LENGKAP: 'John Doe', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 2, NAMA_LENGKAP: 'Samppa Nori', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 3, NAMA_LENGKAP: 'Estavan Lykos', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 4, NAMA_LENGKAP: 'Chetan Mohamed', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 5, NAMA_LENGKAP: 'Derick Maximinus', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 6, NAMA_LENGKAP: 'FrIDerik DávID', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 7, NAMA_LENGKAP: 'Yiorgos Avraamu', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 8, NAMA_LENGKAP: 'Avram Tarasios', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 9, NAMA_LENGKAP: 'Yiorgos Avraamu', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 10, NAMA_LENGKAP: 'Yiorgos Avraamu', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 11, NAMA_LENGKAP: 'Yiorgos Avraamu', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 12, NAMA_LENGKAP: 'Yiorgos Avraamu', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 13, NAMA_LENGKAP: 'Yiorgos Avraamu', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 14, NAMA_LENGKAP: 'Yiorgos Avraamu', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 15, NAMA_LENGKAP: 'Yiorgos Avraamu', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+  {ID: 16, NAMA_LENGKAP: 'Yiorgos Avraamu', NO_TELFON: '085155543321', EMAIL: 'aaaaaaaa@gmail.com', ALAMAT: 'Jl. Rambutan no 19', TANGGAL_MASUK: '04 mei 2021'},
+
 ]
 
+
 export default usersData
+
