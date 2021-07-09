@@ -1,0 +1,17 @@
+button:disabled {
+  cursor: default;
+}
+
+button.disabled {
+  cursor: default;
+}
+
+.btn-brand:not(:only-child) .c-icon {
+  margin-top: 0 !important;
+}
+
+.btn-singin {
+  background-color: #ec8654 !important;
+  color: white !important;
+}
+/*# sourceMappingURL=style.css.map */
