@@ -1,56 +1,40 @@
 // Here you can add other styles
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-div {
-    background-color: white;
-}
-
-.table {
-    color: rgb(0, 0, 0);
-    font-family: 'Roboto', sans-serif;
-    align-items: center;
-    background-color: white;
+.table-new {
+  color: rgb(0, 0, 0);
+  font-family: "Roboto", sans-serif;
+  align-items: center;
 }
 
 .datatable {
-    text-align: center;
+  text-align: center;
 }
 
-.card-body {
-    box-shadow: 5px 5px 8px  #cecece;
+.card-body-new {
+  box-shadow: 5px 5px 8px #cecece;
 }
 
-.text{
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-    font-size: 25;
-    margin-left: 9rem;
+.text {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  font-size: 25;
 }
 
-.button {
-    color: #ffffff;
-    align-items: center;
-    display: inline-flex; 
-    float: right;
-    font-family: 'Roboto', sans-serif;
-    padding: 8px 12px;
-    margin-right: 9rem;
-    background-color: #EC8654;
+.button-add {
+  color: #ffffff;
+  align-items: center;
+  float: right;
+  font-family: "Roboto", sans-serif;
+  // padding: 8px 12px;
+  background-color: #ec8654;
 }
 
-.col {
-    padding-bottom: 2rem;
-}
+// .col-new {
+//   padding-bottom: 2rem;
+// }
 
-.card {
-    margin-left: 10rem;
-    margin-right: 10rem;
-}
-
-html {
-    background-color: white;
-}
 .btn-singin {
   background-color: $sign-in !important;
   color: white !important;
@@ -58,4 +42,19 @@ html {
 
 .black {
   background-color: $black;
+}
+.br-none {
+  border-right: none;
+}
+
+.coklat {
+  background-color: $coklat;
+}
+.abu {
+  background-color: $abu;
+}
+@media (min-width: 992px) {
+  .test {
+    position: sticky !important;
+  }
 }
