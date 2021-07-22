@@ -1,22 +1,18 @@
 // Here you can add other styles
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-div {
-    background-color: white;
-}
 
 .table {
     color: rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
     align-items: center;
-    background-color: white;
 }
 
 .datatable {
     text-align: center;
 }
 
-.card-body {
+.card-table {
     box-shadow: 5px 5px 8px  #cecece;
 }
 
@@ -48,9 +44,6 @@ div {
     margin-right: 10rem;
 }
 
-html {
-    background-color: white;
-}
 .btn-singin {
   background-color: $sign-in !important;
   color: white !important;
@@ -58,4 +51,32 @@ html {
 
 .black {
   background-color: $black;
+}
+
+.header {
+    padding-top: 10rem;
+}
+
+.modal-title{
+    text-align: center;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 25;
+    margin-top: 2rem;
+}
+
+.button2 {
+    color: #ffffff;
+    align-items: center; 
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #EC8654;
+}
+
+.alert-add {
+    background-color: #A0A0A0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: inline-flex;
 }
