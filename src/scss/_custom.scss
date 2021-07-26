@@ -11,6 +11,16 @@
   text-align: center;
 }
 
+.table {
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+}
+
+.card-table {
+    box-shadow: 5px 5px 8px  #cecece;
+}
+
 .card-body-new {
   box-shadow: 5px 5px 8px #cecece;
 }
@@ -57,4 +67,32 @@
   .test {
     position: sticky !important;
   }
+}
+
+.header {
+    padding-top: 10rem;
+}
+
+.modal-title{
+    text-align: center;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 25;
+    margin-top: 2rem;
+}
+
+.button2 {
+    color: #ffffff;
+    align-items: center; 
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #EC8654;
+}
+
+.alert-add {
+    background-color: #A0A0A0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: inline-flex;
 }
