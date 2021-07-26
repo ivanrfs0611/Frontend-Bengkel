@@ -22,6 +22,8 @@ import {
 import usersData from "../../users/UsersData";
 import CIcon from "@coreui/icons-react";
 import { useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
 
 const fields = [
   "ID",
@@ -37,9 +39,26 @@ const NewTable = () => {
   const [modal, setModal] = useState(false);
   const [large, setLarge] = useState(false);
   const [visible, setVisible] = React.useState(false);
+  const [vData, setVData] = useState(null);
   const toggle = () => {
     setModal(!modal);
   };
+
+  const getAllData = () => {
+    axios
+      .get("https://mocki.io/v1/156800b8-a955-400b-a5e4-3f2ae12ffba0")
+      .then((response) => {
+        // const data = response.data;
+        setVData(response.data.Data);
+        console.log(response);
+      });
+  };
+
+  useEffect(() => {
+    getAllData();
+    console.log(vData);
+  }, []);
+
   return (
     <>
       <div class="table-new pt-5 px-lg-5 bg-white">
@@ -94,7 +113,7 @@ const NewTable = () => {
               <CCard className="mx-5-sm" xs="12" lg="12" xl="12">
                 <CCardBody className="datatable card-body-new">
                   <CDataTable
-                    items={usersData}
+                    items={vData}
                     fields={fields}
                     itemsPerPage={10}
                     pagination
