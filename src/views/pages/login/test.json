@@ -1,0 +1,20 @@
+{
+    "Data": [
+      {
+        "ID": 1,
+        "NAMA_LENGKAP": "Adidas",
+        "NO_TELFON": "081212213221",
+        "EMAIL": "asd@gmail.com",
+        "ALAMAT": "Jl. Pisang",
+        "TANGGAL_MASUK": "04 Mei 2021"
+      },
+      {
+        "ID": 2,
+        "NAMA_LENGKAP": "Adidas",
+        "NO_TELFON": "081212213221",
+        "EMAIL": "asd@gmail.com",
+        "ALAMAT": "Jl. Pisang",
+        "TANGGAL_MASUK": "04 Mei 2021"
+      }
+    ]
+  }
