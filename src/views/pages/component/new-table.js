@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   CDataTable,
   CButton,
@@ -13,7 +14,9 @@ import {
   CInputGroup,
   CInput,
   CInputGroupAppend,
-  CInputGroupText
+  CInputGroupText,
+  CAlert,
+//   CProgress
 } from "@coreui/react";
 import usersData from "../../users/UsersData";
 import CIcon from "@coreui/icons-react";
@@ -31,6 +34,7 @@ const fields = [
 
 const NewTable = () => {
     const [modal, setModal] = useState(false);
+    const [visible, setVisible] = React.useState(false)
     const toggle = ()=>{
         setModal(!modal);
     }
@@ -48,6 +52,29 @@ const NewTable = () => {
                             <b className="">ADD EMPLOYEE</b>
 
                         </CButton>
+                    </CCol>
+                </CRow>
+                <CRow>
+                    <CCol>
+                        <CCardBody className="p-0 align-center d-flex flex-center justify-content-center">
+                            <CAlert
+                                color="dark"
+                                show={visible}
+                                // closeButton
+                                onShowChange={setVisible}
+                                centered
+                                className="w-25 d-flex flex-center justify-content-center"
+                            >
+                                Saved
+                                {/* <CProgress
+                                striped
+                                color="warning"
+                                value={Number(visible) * 10}
+                                size="xs"
+                                className="mb-3"
+                                /> */}
+                            </CAlert>
+                        </CCardBody>
                     </CCol>
                 </CRow>
                 <CRow className="pt-lg-5">
@@ -84,7 +111,6 @@ const NewTable = () => {
                                 onClose={toggle}
                                 centered
                             >
-                                
                                 <CModalBody className="pt-5">
                                 <h4><b>Update Employee</b></h4>
                                 <CForm action="" method="post" className="px-3 py-4">
@@ -126,7 +152,7 @@ const NewTable = () => {
                                     </CInputGroup>
                                     </CFormGroup>
                                     <CFormGroup className="form-actions pt-4">
-                                    <CButton className="w-100 btn-singin">Save</CButton>{' '}
+                                    <CButton className="w-100 btn-singin"onClick={() => { setVisible(5); toggle();}}>Save</CButton>
                                     </CFormGroup>
                                 </CForm> 
                                 </CModalBody>
