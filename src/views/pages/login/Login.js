@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
 // import { Link } from 'react-router-dom'
 import {
@@ -17,11 +18,13 @@ import { useState } from "react";
 import axios from "axios";
 
 const Login = () => {
+  //TODO Get Values from Fields
   const [values, setValues] = useState({
     username: "",
     password: "",
   });
 
+  //TODO HandleSubmit for Consume API Post Method when Button Submit Clicked
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -34,6 +37,8 @@ const Login = () => {
     );
   };
   console.log(handleSubmit);
+
+  //TODO HandleChange for Get Values from Fields when Values Changes
   const handleChange = (name) => (e) => {
     setValues({ ...values, [name]: e.target.value });
   };
@@ -46,6 +51,7 @@ const Login = () => {
             <CCardGroup>
               <CCard className="p-5 shadow-sm bg-white rounded">
                 <CCardBody>
+                  //! Form Sign In
                   <CForm>
                     <h2 className="text-center">Sign In</h2>
                     <CInputGroup className="mb-3 mt-5">

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
 import {
   CDataTable,
@@ -17,14 +18,14 @@ import {
   CInputGroupText,
   CAlert,
   CProgress,
-  //   CProgress
 } from "@coreui/react";
-// import usersData from "../../users/UsersData";
+////import usersData from "../../users/UsersData";
 import CIcon from "@coreui/icons-react";
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 
+//* Column Name
 const fields = [
   "ID",
   "NAMA_LENGKAP",
@@ -44,6 +45,7 @@ const NewTable = () => {
     setModal(!modal);
   };
 
+  //TODO Consume API using get method
   const getAllData = () => {
     axios
       .get("https://mocki.io/v1/156800b8-a955-400b-a5e4-3f2ae12ffba0")
@@ -78,6 +80,7 @@ const NewTable = () => {
                 </CAlert>
               </CCol>
             </CCol>
+            //! Button Add Employee
             <CCol xs="6" lg="6" xl="6">
               <CButton className="button-add" onClick={() => setLarge(!large)}>
                 <CIcon name="cil-user-follow" className="icon" />
@@ -97,17 +100,11 @@ const NewTable = () => {
                   className="w-25 d-flex flex-center justify-content-center"
                 >
                   Saved
-                  {/* <CProgress
-                                striped
-                                color="warning"
-                                value={Number(visible) * 10}
-                                size="xs"
-                                className="mb-3"
-                                /> */}
                 </CAlert>
               </CCardBody>
             </CCol>
           </CRow>
+          //! Table
           <CRow className="pt-lg-5">
             <CCol className="">
               <CCard className="mx-5-sm" xs="12" lg="12" xl="12">
@@ -136,6 +133,7 @@ const NewTable = () => {
                       },
                     }}
                   />
+                  //! Modal Add New Employee
                   <CModal
                     show={large}
                     onClose={() => setLarge(!large)}
@@ -223,6 +221,7 @@ const NewTable = () => {
                       </CRow>
                     </CModalBody>
                   </CModal>
+                  //! Modal Update Employee
                   <CModal show={modal} onClose={toggle} centered>
                     <CModalBody className="pt-5">
                       <h4>
