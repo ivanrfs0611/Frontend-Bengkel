@@ -1,12 +1,12 @@
 import React from "react";
+import { CRow, CCol } from "@coreui/react";
 
 import NewNavbar from "../component/new-navbar";
 import NewFooter from "../component/new-footer";
-
 import NewSideBar from "../component/new-sidebar";
-import Content from "../component/new-content";
+import TableHomepage from "./TableHomepage";
+
 import "src/scss/style.scss";
-import { CRow, CCol } from "@coreui/react";
 
 const Homepage = () => {
   // const [large, setLarge] = useState(false)
@@ -18,12 +18,11 @@ const Homepage = () => {
         <CRow className="">
           <NewSideBar />
           <CCol className="">
-            <Content />
+            <TableHomepage />
           </CCol>
         </CRow>
-
-        <NewFooter />
       </div>
+      <NewFooter />
     </>
   );
 };
