@@ -17,6 +17,7 @@ const Register = React.lazy(() => import("./views/pages/register/Register"));
 const Page404 = React.lazy(() => import("./views/pages/page404/Page404"));
 const Page500 = React.lazy(() => import("./views/pages/page500/Page500"));
 const Employee = React.lazy(() => import("./views/pages/Homepage/Homepage"));
+const EmployeeDetails = React.lazy(() => import("./views/pages/Homepage/Homepage-Employee"));
 const Services = React.lazy(() =>
   import("./views/pages/PageServices/Services")
 );
@@ -37,6 +38,12 @@ class App extends Component {
               path="/employee"
               name="Employee"
               render={(props) => <Employee {...props} />}
+            />
+            <Route
+              exact
+              path="/employee/details"
+              name="Employee-details"
+              render={(props) => <EmployeeDetails {...props} />}
             />
             <Route
               exact

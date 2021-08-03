@@ -16,7 +16,6 @@ import {
   CInputGroupAppend,
   CInputGroupText,
   CAlert,
-  CProgress,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 import { useState, useEffect } from "react";
@@ -35,12 +34,18 @@ const fields = [
 
 const TableHomepage = () => {
   const [modal, setModal] = useState(false);
-  const [large, setLarge] = useState(false);
+  const [modal2, setModal2] = useState(false);
+  // const [large, setLarge] = useState(false);
   const [visible, setVisible] = React.useState(false);
+  const [visible2, setVisible2] = React.useState(false);
   const [vData, setVData] = useState(null);
   const toggle = () => {
     setModal(!modal);
   };
+   const toggle2 = () => {
+    setModal2(!modal2);
+  };
+  
 
   //TODO Consume API using get method
   const getAllData = () => {
@@ -60,29 +65,18 @@ const TableHomepage = () => {
 
   return (
     <>
-      <main className="c-main pt-0">
-        <div class="table-new pt-5 px-lg-5 bg-white">
+      <main className="c-main pt-0 hv-100">
+        <div class="table-new pt-5 px-lg-5 bg-white hv-100">
           <CContainer>
             <CRow>
               <CCol xs="6" lg="6" xl="6">
                 <h2 class="text">Employees</h2>
-                <CCol md="1">
-                  <CAlert
-                    className="alert-add"
-                    color="dark"
-                    show={visible}
-                    onShowChange={setVisible}
-                  >
-                    <strong>ADDED</strong>
-                    <CProgress value={Number(visible) * 5} />
-                  </CAlert>
-                </CCol>
               </CCol>
               {/* //! Button Add Employee */}
               <CCol xs="6" lg="6" xl="6">
                 <CButton
                   className="button-add"
-                  onClick={() => setLarge(!large)}
+                  onClick={toggle2}
                 >
                   <CIcon name="cil-user-follow" className="icon" />
                   <b className="">ADD EMPLOYEE</b>
@@ -105,8 +99,24 @@ const TableHomepage = () => {
                 </CCardBody>
               </CCol>
             </CRow>
+            <CRow>
+              <CCol>
+                <CCardBody className="p-0 align-center d-flex flex-center justify-content-center">
+                  <CAlert
+                    color="dark"
+                    show={visible2}
+                    // closeButton
+                    onShowChange={setVisible2}
+                    centered
+                    className="w-25 d-flex flex-center justify-content-center button-alert"
+                  >
+                    Added
+                  </CAlert>
+                </CCardBody>
+              </CCol>
+            </CRow>
             {/* //! Table */}
-            <CRow className="pt-lg-5">
+            <CRow className="pt-5">
               <CCol className="">
                 <CCard className="mx-5-sm" xs="12" lg="12" xl="12">
                   <CCardBody className="datatable card-body-new">
@@ -136,8 +146,8 @@ const TableHomepage = () => {
                     />
                     {/* //! Modal Add New Employee */}
                     <CModal
-                      show={large}
-                      onClose={() => setLarge(!large)}
+                      show={modal2}
+                      onClose={() => setModal2(!modal2)} 
                       centered
                     >
                       <CModalBody>
@@ -207,15 +217,19 @@ const TableHomepage = () => {
                                       id="date"
                                       name="date"
                                       autoComplete="date"
-                                      placeholder="Tanggal Masuk"
-                                      required
-                                    />
+                                      placeholder="Tanggal Masuk" 
+                                      required                                 
+                                      />
                                   </CInputGroup>
                                 </CFormGroup>
                                 <CFormGroup className="form-actions">
                                   <CButton
                                     type="submit"
                                     className="button2 w-100"
+                                    onClick={() => {
+                                      setVisible2(5);
+                                      toggle2();
+                                    }}
                                   >
                                     Submit
                                   </CButton>
