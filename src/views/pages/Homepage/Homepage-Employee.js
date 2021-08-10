@@ -15,9 +15,9 @@ const Homepage = () => {
       <div className="c-wrapper">
         <NewNavbar />
         <CRow className="">
-          <NewSideBar/>
+          <NewSideBar />
           <CCol className="">
-            <DetailsEmployee/>
+            <DetailsEmployee />
           </CCol>
         </CRow>
       </div>
