@@ -16,8 +16,11 @@ const Login = React.lazy(() => import("./views/pages/login/Login"));
 const Register = React.lazy(() => import("./views/pages/register/Register"));
 const Page404 = React.lazy(() => import("./views/pages/page404/Page404"));
 const Page500 = React.lazy(() => import("./views/pages/page500/Page500"));
-const Homepage = React.lazy(() => import("./views/pages/Homepage/Homepage"));
-const Employee = React.lazy(() => import("./views/pages/employee/employee"));
+const Employee = React.lazy(() => import("./views/pages/Homepage/Homepage"));
+const EmployeeDetails = React.lazy(() => import("./views/pages/Homepage/Homepage-Employee"));
+const Services = React.lazy(() =>
+  import("./views/pages/PageServices/Services")
+);
 class App extends Component {
   render() {
     return (
@@ -32,15 +35,15 @@ class App extends Component {
             />
             <Route
               exact
-              path="/Homepage"
-              name="Homepage"
-              render={(props) => <Homepage {...props} />}
-            />
-            <Route
-              exact
               path="/employee"
               name="Employee"
               render={(props) => <Employee {...props} />}
+            />
+            <Route
+              exact
+              path="/employee/details"
+              name="Employee-details"
+              render={(props) => <EmployeeDetails {...props} />}
             />
             <Route
               exact
@@ -59,6 +62,12 @@ class App extends Component {
               path="/500"
               name="Page 500"
               render={(props) => <Page500 {...props} />}
+            />
+            <Route
+              exact
+              path="/services"
+              name="Service"
+              render={(props) => <Services {...props} />}
             />
             <Route
               path="/"

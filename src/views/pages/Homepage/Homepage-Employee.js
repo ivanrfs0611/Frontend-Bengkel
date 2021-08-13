@@ -4,8 +4,8 @@ import { CRow, CCol } from "@coreui/react";
 import NewNavbar from "../component/new-navbar";
 import NewFooter from "../component/new-footer";
 import NewSideBar from "../component/new-sidebar";
-import TableHomepage from "./TableHomepage";
-
+import DetailsEmployee from "./DetailsEmployee";
+import TableDetails from "./TableDetails";
 import "src/scss/style.scss";
 
 const Homepage = () => {
@@ -16,9 +16,10 @@ const Homepage = () => {
       <div className="c-wrapper">
         <NewNavbar />
         <CRow className="">
-          <NewSideBar/>
+          <NewSideBar />
           <CCol className="">
-            <TableHomepage />
+            <DetailsEmployee />
+            <TableDetails />
           </CCol>
         </CRow>
       </div>

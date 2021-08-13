@@ -4,21 +4,19 @@ import { CRow, CCol } from "@coreui/react";
 import NewNavbar from "../component/new-navbar";
 import NewFooter from "../component/new-footer";
 import NewSideBar from "../component/new-sidebar";
-import TableHomepage from "./TableHomepage";
+import TableServices from "./TableServices";
 
 import "src/scss/style.scss";
 
-const Homepage = () => {
-  // const [large, setLarge] = useState(false)
-  // const [visible, setVisible] = React.useState(5)
+const Services = () => {
   return (
     <>
       <div className="c-wrapper">
         <NewNavbar />
         <CRow className="">
-          <NewSideBar/>
+          <NewSideBar />
           <CCol className="">
-            <TableHomepage />
+            <TableServices />
           </CCol>
         </CRow>
       </div>
@@ -27,4 +25,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Services;
