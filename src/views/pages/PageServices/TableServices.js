@@ -61,7 +61,7 @@ const TableServices = () => {
   return (
     <>
       <main className="c-main pt-0">
-        <div class="table-new pt-5 px-lg-5 bg-white">
+        <div class="table-new pt-5 px-lg-5 bg-white hv-100">
           <CContainer>
             <CRow>
               <CCol xs="6" lg="6" xl="6">
