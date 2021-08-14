@@ -42,10 +42,10 @@ const TableHomepage = () => {
   const toggle = () => {
     setModal(!modal);
   };
-   const toggle2 = () => {
+  const toggle2 = () => {
     setModal2(!modal2);
   };
-  
+
 
   //TODO Consume API using get method
   const getAllData = () => {
@@ -147,7 +147,7 @@ const TableHomepage = () => {
                     {/* //! Modal Add New Employee */}
                     <CModal
                       show={modal2}
-                      onClose={() => setModal2(!modal2)} 
+                      onClose={() => setModal2(!modal2)}
                       centered
                     >
                       <CModalBody>
@@ -217,9 +217,9 @@ const TableHomepage = () => {
                                       id="date"
                                       name="date"
                                       autoComplete="date"
-                                      placeholder="Tanggal Masuk" 
-                                      required                                 
-                                      />
+                                      placeholder="Tanggal Masuk"
+                                      required
+                                    />
                                   </CInputGroup>
                                 </CFormGroup>
                                 <CFormGroup className="form-actions">
