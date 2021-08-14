@@ -5,6 +5,7 @@ import NewNavbar from "../component/new-navbar";
 import NewFooter from "../component/new-footer";
 import NewSideBar from "../component/new-sidebar";
 import DetailsEmployee from "./DetailsEmployee";
+import TableDetails from "./TableDetails";
 import "src/scss/style.scss";
 
 const Homepage = () => {
@@ -18,6 +19,7 @@ const Homepage = () => {
           <NewSideBar />
           <CCol className="">
             <DetailsEmployee />
+            <TableDetails />
           </CCol>
         </CRow>
       </div>

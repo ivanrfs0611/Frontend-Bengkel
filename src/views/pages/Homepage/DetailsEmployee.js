@@ -58,7 +58,9 @@ const DetailsEmployee = () => {
                 <div>
                   <CRow>
                     <CCol>
-                      <CLabel class="text m-0 align-center text-secondary">ID</CLabel>
+                      <CLabel class="text m-0 align-center text-secondary">
+                        ID
+                      </CLabel>
                     </CCol>
                   </CRow>
                   <CRow>
@@ -70,7 +72,9 @@ const DetailsEmployee = () => {
                 <div className="pt-2">
                   <CRow>
                     <CCol>
-                      <CLabel class="text m-0 align-center text-secondary">No telfon</CLabel>
+                      <CLabel class="text m-0 align-center text-secondary">
+                        No telfon
+                      </CLabel>
                     </CCol>
                   </CRow>
                   <CRow>
@@ -82,39 +86,49 @@ const DetailsEmployee = () => {
                 <div className="pt-2">
                   <CRow>
                     <CCol>
-                      <CLabel class="text m-0 align-center text-secondary">Email</CLabel>
+                      <CLabel class="text m-0 align-center text-secondary">
+                        Email
+                      </CLabel>
                     </CCol>
                   </CRow>
                   <CRow>
                     <CCol>
-                      <CLabel class="text m-0 align-center">Bambang @gmail</CLabel>
+                      <CLabel class="text m-0 align-center">
+                        Bambang @gmail
+                      </CLabel>
                     </CCol>
                   </CRow>
                 </div>
                 <div className="pt-2">
                   <CRow>
                     <CCol>
-                      <CLabel class="text m-0 align-center text-secondary">Alamat</CLabel>
+                      <CLabel class="text m-0 align-center text-secondary">
+                        Alamat
+                      </CLabel>
                     </CCol>
                   </CRow>
                   <CRow>
                     <CCol>
-                      <CLabel class="text m-0 align-center">Jalan Rambutan no 10</CLabel>
+                      <CLabel class="text m-0 align-center">
+                        Jalan Rambutan no 10
+                      </CLabel>
                     </CCol>
                   </CRow>
                 </div>
               </CCol>
               <CCol className="text-right">
                 <CButton onClick={toggle} className="p-0">
-                  <CImg src="https://image.flaticon.com/icons/png/512/747/747376.png" width="100px" height="100px" />
+                  <CImg
+                    src="https://image.flaticon.com/icons/png/512/747/747376.png"
+                    width="100px"
+                    height="100px"
+                  />
                 </CButton>
               </CCol>
             </CRow>
             <CModal show={modal} onClose={toggle} centered>
               <CModalBody className="pt-5">
-                <h4 className="text text-center">
-                  Add Job
-                </h4>
+                <h4 className="text text-center">Add Job</h4>
                 <CForm action="" method="post" className="px-3 py-4">
                   <CFormGroup>
                     <CInputGroup>
